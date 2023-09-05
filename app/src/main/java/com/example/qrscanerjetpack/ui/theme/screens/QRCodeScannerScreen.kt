@@ -47,10 +47,11 @@ fun QRCodeScannerScreen(urlText: String, onUrlTextUpdate: (String) -> Unit) {
     ) {
         Text(text=statusText, fontWeight = FontWeight.SemiBold, fontSize = 30.sp)
 
-        Spacer(modifier = Modifier.height(5.dp))
+        Spacer(modifier = Modifier.height(30.dp))
         CameraPreview { url ->
             onUrlTextUpdate(url)
         }
+        Spacer(modifier = Modifier.height(10.dp))
         OutlinedTextField(
             modifier = Modifier.fillMaxWidth(),
             value = urlText,
